@@ -12,57 +12,57 @@ const ForumPage = () => {
   const posts = [
     {
       id: 1,
-      title: "Кто-нибудь видел его на прошлой неделе?",
+      title: "Кто-нибудь видел Кирилла Петракова на прошлой неделе?",
       author: "u/mystery_user",
       timeAgo: "2 часа назад",
       upvotes: 127,
       downvotes: 8,
       comments: 23,
-      content: "Встретил его в торговом центре, выглядел очень подозрительно. Что-то скрывает точно...",
+      content: "Встретил Кирилла Петракова в торговом центре, выглядел очень подозрительно. Что-то скрывает точно... Этот Петраков явно что-то замышляет!",
       category: "discussions"
     },
     {
       id: 2,
-      title: "СРОЧНО: Новые факты о его прошлом!",
+      title: "СРОЧНО: Новые факты о Кирилле Петракове!",
       author: "u/investigator_pro",
       timeAgo: "4 часа назад",
       upvotes: 89,
       downvotes: 12,
       comments: 34,
-      content: "Ребята, я нашёл его старые фотографии в архивах школы. Не поверите что там...",
+      content: "Ребята, я нашёл старые фотографии Кирилла Петракова в архивах школы. Не поверите что там... Петраков был совсем другим!",
       category: "discussions"
     },
     {
       id: 3,
-      title: "Его странные привычки",
+      title: "Странные привычки Кирилла Петракова",
       author: "u/observer123",
       timeAgo: "6 часов назад",
       upvotes: 156,
       downvotes: 5,
       comments: 67,
-      content: "Каждый день в одно и то же время заходит в тот же магазин. Покупает одно и то же. Подозрительно...",
+      content: "Каждый день в одно и то же время Кирилл Петраков заходит в тот же магазин. Покупает одно и то же. Подозрительно... Что скрывает этот Петраков?",
       category: "discussions"
     },
     {
       id: 4,
-      title: "Мой опыт общения с ним",
+      title: "Мой опыт общения с Кириллом Петраковым",
       author: "u/former_friend",
       timeAgo: "8 часов назад",
       upvotes: 203,
       downvotes: 15,
       comments: 89,
-      content: "Знал его лично. Расскажу всё как есть - он не тот, кем кажется...",
+      content: "Знал Кирилла Петракова лично. Расскажу всё как есть - Петраков не тот, кем кажется... Этот Кирилл меня разочаровал.",
       category: "comments"
     },
     {
       id: 5,
-      title: "Редкие фотографии из его детства",
+      title: "Редкие фотографии Кирилла Петракова из детства",
       author: "u/photo_hunter",
       timeAgo: "1 день назад",
       upvotes: 312,
       downvotes: 7,
       comments: 45,
-      content: "Нашёл в семейном архиве. Посмотрите на эти глаза...",
+      content: "Нашёл в семейном архиве фото маленького Кирилла Петракова. Посмотрите на эти глаза... Уже тогда Петраков был странным!",
       category: "photos"
     }
   ];
@@ -103,7 +103,7 @@ const ForumPage = () => {
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="secondary" className="text-xs">
-                r/friendwatch
+                r/kirill_petrakov_watch
               </Badge>
               <span className="text-xs text-reddit-textSecondary">
                 Опубликовано {post.author} • {post.timeAgo}
@@ -151,124 +151,138 @@ const ForumPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-reddit-lightGray">
-      {/* Header */}
-      <header className="bg-reddit-cardBg border-b border-reddit-border sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-reddit-orange rounded-full flex items-center justify-center">
-                  <Icon name="Users" size={18} className="text-white" />
+    <div className="min-h-screen bg-reddit-lightGray relative">
+      {/* Background image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-5 pointer-events-none z-0"
+        style={{
+          backgroundImage: 'url(https://cdn.poehali.dev/files/bc29f8f7-b8b6-45c7-ad1a-404f40e4079c.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'grayscale(50%) blur(1px)'
+        }}
+      />
+      
+      {/* Content overlay */}
+      <div className="relative z-10">
+        {/* Header */}
+        <header className="bg-reddit-cardBg border-b border-reddit-border sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-4 py-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-reddit-orange rounded-full flex items-center justify-center">
+                    <Icon name="Users" size={18} className="text-white" />
+                  </div>
+                  <h1 className="text-xl font-bold text-reddit-textPrimary">
+                    Кирилл Петраков Forum
+                  </h1>
                 </div>
-                <h1 className="text-xl font-bold text-reddit-textPrimary">
-                  FriendForum
-                </h1>
               </div>
-            </div>
-            
-            <div className="flex items-center space-x-3">
-              <Button variant="outline" size="sm">
-                <Icon name="Plus" size={16} className="mr-1" />
-                Создать пост
-              </Button>
-              <div className="w-8 h-8 bg-reddit-textSecondary rounded-full flex items-center justify-center">
-                <Icon name="User" size={16} className="text-white" />
+              
+              <div className="flex items-center space-x-3">
+                <Button variant="outline" size="sm">
+                  <Icon name="Plus" size={16} className="mr-1" />
+                  Создать пост
+                </Button>
+                <div className="w-8 h-8 bg-reddit-textSecondary rounded-full flex items-center justify-center">
+                  <Icon name="User" size={16} className="text-white" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <Card className="bg-reddit-cardBg border-reddit-border sticky top-24">
-              <CardHeader>
-                <h2 className="text-lg font-semibold text-reddit-textPrimary">
-                  О сообществе
-                </h2>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-sm text-reddit-textSecondary">
-                  Здесь мы обсуждаем нашего загадочного друга и делимся наблюдениями.
-                </div>
-                
-                <Separator />
-                
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-reddit-textSecondary">Участники</span>
-                    <span className="text-sm font-semibold text-reddit-textPrimary">1,247</span>
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <Card className="bg-reddit-cardBg border-reddit-border sticky top-24">
+                <CardHeader>
+                  <h2 className="text-lg font-semibold text-reddit-textPrimary">
+                    О сообществе
+                  </h2>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="text-sm text-reddit-textSecondary">
+                    Здесь мы обсуждаем Кирилла Петракова и делимся наблюдениями за его подозрительным поведением.
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-reddit-textSecondary">Онлайн</span>
-                    <span className="text-sm font-semibold text-reddit-textPrimary">89</span>
+                  
+                  <Separator />
+                  
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-sm text-reddit-textSecondary">Участники</span>
+                      <span className="text-sm font-semibold text-reddit-textPrimary">1,247</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-sm text-reddit-textSecondary">Онлайн</span>
+                      <span className="text-sm font-semibold text-reddit-textPrimary">89</span>
+                    </div>
                   </div>
-                </div>
 
-                <Separator />
+                  <Separator />
 
-                <div className="space-y-2">
-                  <h3 className="text-sm font-semibold text-reddit-textPrimary">Правила</h3>
-                  <ul className="text-xs text-reddit-textSecondary space-y-1">
-                    <li>1. Будьте вежливы</li>
-                    <li>2. Никакого спама</li>
-                    <li>3. Только достоверные факты</li>
-                    <li>4. Уважайте мнения других</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Main content */}
-          <div className="lg:col-span-3">
-            <div className="space-y-4">
-              {/* Navigation tabs */}
-              <Card className="bg-reddit-cardBg border-reddit-border">
-                <CardContent className="p-0">
-                  <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                    <TabsList className="grid w-full grid-cols-3 bg-transparent border-b border-reddit-border rounded-none h-12">
-                      <TabsTrigger 
-                        value="discussions" 
-                        className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
-                      >
-                        <Icon name="MessageSquare" size={16} className="mr-2" />
-                        Обсуждения
-                      </TabsTrigger>
-                      <TabsTrigger 
-                        value="comments" 
-                        className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
-                      >
-                        <Icon name="MessageCircle" size={16} className="mr-2" />
-                        Комментарии
-                      </TabsTrigger>
-                      <TabsTrigger 
-                        value="photos" 
-                        className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
-                      >
-                        <Icon name="Image" size={16} className="mr-2" />
-                        Фото
-                      </TabsTrigger>
-                    </TabsList>
-                  </Tabs>
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-semibold text-reddit-textPrimary">Правила</h3>
+                    <ul className="text-xs text-reddit-textSecondary space-y-1">
+                      <li>1. Будьте вежливы к Кириллу</li>
+                      <li>2. Никакого спама про Петракова</li>
+                      <li>3. Только достоверные факты о Кирилле</li>
+                      <li>4. Уважайте мнения о Петракове</li>
+                    </ul>
+                  </div>
                 </CardContent>
               </Card>
+            </div>
 
-              {/* Posts */}
-              <div className="space-y-3">
-                {filteredPosts.map((post) => (
-                  <PostCard key={post.id} post={post} />
-                ))}
-              </div>
+            {/* Main content */}
+            <div className="lg:col-span-3">
+              <div className="space-y-4">
+                {/* Navigation tabs */}
+                <Card className="bg-reddit-cardBg border-reddit-border">
+                  <CardContent className="p-0">
+                    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                      <TabsList className="grid w-full grid-cols-3 bg-transparent border-b border-reddit-border rounded-none h-12">
+                        <TabsTrigger 
+                          value="discussions" 
+                          className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
+                        >
+                          <Icon name="MessageSquare" size={16} className="mr-2" />
+                          Обсуждения
+                        </TabsTrigger>
+                        <TabsTrigger 
+                          value="comments" 
+                          className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
+                        >
+                          <Icon name="MessageCircle" size={16} className="mr-2" />
+                          Комментарии
+                        </TabsTrigger>
+                        <TabsTrigger 
+                          value="photos" 
+                          className="data-[state=active]:border-b-2 data-[state=active]:border-reddit-orange data-[state=active]:bg-transparent rounded-none"
+                        >
+                          <Icon name="Image" size={16} className="mr-2" />
+                          Фото
+                        </TabsTrigger>
+                      </TabsList>
+                    </Tabs>
+                  </CardContent>
+                </Card>
 
-              {/* Load more */}
-              <div className="text-center py-8">
-                <Button variant="outline" className="px-8">
-                  Загрузить ещё посты
-                </Button>
+                {/* Posts */}
+                <div className="space-y-3">
+                  {filteredPosts.map((post) => (
+                    <PostCard key={post.id} post={post} />
+                  ))}
+                </div>
+
+                {/* Load more */}
+                <div className="text-center py-8">
+                  <Button variant="outline" className="px-8">
+                    Загрузить ещё посты про Петракова
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
