@@ -22,17 +22,20 @@ export default {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
-				// Forum theme colors
-				reddit: {
-					orange: '#FF4500',
-					darkGray: '#1A1A1B',
-					lightGray: '#F6F7F8',
-					cardBg: '#FFFFFF',
-					textPrimary: '#1C1C1C',
-					textSecondary: '#787C7E',
-					border: '#EDEFF1',
-					upvote: '#FF4500',
-					downvote: '#7193FF',
+				// Darknet forum theme colors
+				darknet: {
+					background: '#0a0a0a',
+					surface: '#1a1a1a',
+					cardBg: '#212121',
+					border: '#333333',
+					accent: '#00ff41',
+					accentDark: '#00cc33',
+					textPrimary: '#e0e0e0',
+					textSecondary: '#999999',
+					textMuted: '#666666',
+					danger: '#ff6b6b',
+					warning: '#ffa500',
+					success: '#00ff41',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
